@@ -1,0 +1,29 @@
+<!doctype html>
+    <title>Super Resolution using Deep Learning</title>
+    <h1>Super Resolution using Deep Learning</h1>
+    <form action="" method=post enctype=multipart/form-data>
+      <input type="radio" name="mode" value="4">4x Mode
+      <input type="radio" name="mode" value="2">2x Mode
+      <input type="radio" name="mode" value="2j">2x JPEG Mode
+      <input type="radio" name="mode" value="bench" checked="checked">Bench Mode 
+      <p><input type=file name=file>
+         <input type=submit value=Upload>
+    </form>
+    <br>
+    <h1>Try demo file</h1>
+    <h3>manga</h3>
+    <a href={{url_for('result', filename = 'spiderman.jpg')}}><img src="upload/spiderman.jpg"></a>
+    <br>
+    <br>
+    <a href={{url_for('result', filename = 'arisa.jpg')}}><img src="upload/lr_4x_arisa.jpg"></a>
+    <br>
+    <br>
+    <h3>real image</h3>
+    <a href={{url_for('result', filename = 'landscape.jpg')}}><img src="upload/lr_4x_landscape.jpg">출처 : https://sjh8055.tistory.com/669</a>
+    <br>
+    <a href={{url_for('result', filename = 'mountain.jpg')}}><img src="upload/lr_4x_mountain.jpg"></a>
+    <h3>document</h3>
+    <a href={{url_for('result', filename = 'doc.jpg')}}><img src="upload/lr_4x_doc.jpg"></a>
+    <br>
+    <br>
+    <a href={{url_for('result', filename = 'text.png')}}><img src="upload/lr_4x_text.png"></a>

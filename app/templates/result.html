@@ -1,0 +1,16 @@
+<!doctype html>
+<title>result</title>
+
+<h1>Low resolution image</h1>
+<img src="{{url_for('upload', filename=filename[1])}}">
+<h1>Bicubic image</h1>
+<img src="{{url_for('upload', filename=filename[2])}}">
+<h1>Super resolution image</h1>
+{%if filename[3] == 'fail'%}
+    <h2>super resolution failed. image is too big</h2>
+{%else%}
+    <img src="{{url_for('upload', filename=filename[3])}}">
+{%endif%}
+<h1>Ground truth image</h1>
+
+<img src="{{url_for('upload', filename=filename[0])}}">
